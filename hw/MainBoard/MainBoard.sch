@@ -1,0 +1,758 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 9
+Title "DIY SMU"
+Date ""
+Rev "A"
+Comp "Hamre Engineering"
+Comment1 "Based on: http://www.djerickson.com/diy_smu/index.html"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 1300 800  0    50   ~ 0
+SPI/IIC Interface from CPU\n
+$Comp
+L Connector_Generic:Conn_01x14 J1
+U 1 1 5FFC6221
+P 1550 1800
+F 0 "J1" H 1468 2617 50  0000 C CNN
+F 1 "Conn_01x14" H 1468 2526 50  0000 C CNN
+F 2 "Connectors_Multicomp:Multicomp_MC9A12-1434_2x07x2.54mm_Straight" H 1550 1800 50  0001 C CNN
+F 3 "~" H 1550 1800 50  0001 C CNN
+F 4 "On Shore Technology" H 1550 1800 50  0001 C CNN "Manufacturer"
+F 5 "302-S141" H 1550 1800 50  0001 C CNN "partnr"
+	1    1550 1800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1200 2300 2000
+Wire Wire Line
+	1750 1200 2300 1200
+Text Label 2000 1200 0    50   ~ 0
+SPIGND
+Wire Wire Line
+	1750 1300 2450 1300
+Text Label 2000 1300 0    50   ~ 0
++5VIN
+Wire Wire Line
+	2050 1400 1750 1400
+Wire Wire Line
+	2050 1500 1750 1500
+Wire Wire Line
+	2050 1600 1750 1600
+Text Label 2050 1400 0    50   ~ 0
+SCK
+Text Label 2050 1500 0    50   ~ 0
+MOSI
+Text Label 2050 1600 0    50   ~ 0
+MISO
+Wire Wire Line
+	1750 2000 2300 2000
+Connection ~ 2300 2000
+Wire Wire Line
+	1750 2100 2450 2100
+Wire Wire Line
+	2450 2100 2450 1300
+Wire Wire Line
+	2050 2400 2050 2500
+Connection ~ 2050 2400
+Wire Wire Line
+	2050 2400 1750 2400
+Text Label 1800 2400 0    50   ~ 0
++12VIN
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FFD5A20
+P 2500 2400
+F 0 "TP1" V 2454 2588 50  0000 L CNN
+F 1 "TP+12" V 2545 2588 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2700 2400 50  0001 C CNN
+F 3 "~" H 2700 2400 50  0001 C CNN
+	1    2500 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5FFD63DB
+P 2500 2750
+F 0 "TP2" V 2454 2938 50  0000 L CNN
+F 1 "TPIGND" V 2545 2938 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2700 2750 50  0001 C CNN
+F 3 "~" H 2700 2750 50  0001 C CNN
+	1    2500 2750
+	0    1    1    0   
+$EndComp
+Connection ~ 2300 2750
+Wire Wire Line
+	6800 6350 6400 6350
+Wire Wire Line
+	6800 6500 6300 6500
+Text Label 6400 6350 0    50   ~ 0
++5V
+Text Label 6300 6500 0    50   ~ 0
++2.5VREF
+Text Label 6300 6600 0    50   ~ 0
+-2.5VREF
+Wire Wire Line
+	6800 7250 6350 7250
+Wire Wire Line
+	6800 7350 6350 7350
+Wire Wire Line
+	6800 7450 6350 7450
+Text Label 6350 7250 0    50   ~ 0
+ISCK
+Text Label 6350 7350 0    50   ~ 0
+IMOSI
+Text Label 6350 7450 0    50   ~ 0
+IMISO
+$Sheet
+S 3550 900  900  750 
+U 6046F04F
+F0 "power" 50
+F1 "power.sch" 50
+F2 "+12VIN" I L 3550 1100 50 
+F3 "+5V" O R 4450 1000 50 
+F4 "+15V" O R 4450 1200 50 
+F5 "-15V" O R 4450 1100 50 
+F6 "reset" O R 4450 1400 50 
+F7 "GND_CPU" I L 3550 1550 50 
+F8 "GND" I R 4450 1550 50 
+$EndSheet
+Wire Wire Line
+	2300 2750 2500 2750
+$Sheet
+S 10000 3200 850  1450
+U 605D6625
+F0 "crossover" 50
+F1 "crossover.sch" 50
+F2 "VM" I L 10000 4400 50 
+F3 "IM" I L 10000 4500 50 
+F4 "FDACN" I L 10000 4000 50 
+F5 "CL+" I L 10000 4150 50 
+F6 "CL-" I L 10000 4250 50 
+F7 "OCOM" I R 10850 4500 50 
+F8 "AMPIN" O R 10850 4100 50 
+F9 "ICLAMP" O L 10000 3850 50 
+F10 "VMODE" I L 10000 3700 50 
+F11 "IMODE" I L 10000 3600 50 
+F12 "-15V" I L 10000 3350 50 
+F13 "+15V" I L 10000 3450 50 
+F14 "+5V" I L 10000 3250 50 
+$EndSheet
+$Sheet
+S 6800 3750 1000 1600
+U 608790AA
+F0 "dac" 50
+F1 "dac.sch" 50
+F2 "+5V" I L 6800 3950 50 
+F3 "CL+" O R 7800 4150 50 
+F4 "CL-" O R 7800 4250 50 
+F5 "MISO" O L 6800 4650 50 
+F6 "SCLK" I L 6800 4450 50 
+F7 "MOSI" I L 6800 4550 50 
+F8 "reset" I L 6800 3800 50 
+F9 "-2.5VREF" O L 6800 5000 50 
+F10 "+2.5VREF" O L 6800 5100 50 
+F11 "~CS" I L 6800 4350 50 
+F12 "+15V" I L 6800 4150 50 
+F13 "-15V" I L 6800 4050 50 
+F14 "FDACLO" I L 6800 4850 50 
+F15 "FDACN" O R 7800 4000 50 
+F16 "GND" I L 6800 5250 50 
+$EndSheet
+$Sheet
+S 10000 5100 850  1450
+U 60990492
+F0 "current measure" 50
+F1 "imeasure.sch" 50
+F2 "AMPGND" I R 10850 5250 50 
+F3 "10uA" I L 10000 5550 50 
+F4 "100uA" I L 10000 5650 50 
+F5 "1mA" I L 10000 5750 50 
+F6 "10mA" I L 10000 5850 50 
+F7 "LT10mA" I L 10000 6150 50 
+F8 "100mA" I L 10000 5950 50 
+F9 "1A" I L 10000 6050 50 
+F10 "+5V" I L 10000 5150 50 
+F11 "IM" O L 10000 6400 50 
+F12 "+Guard" O R 10850 5850 50 
+F13 "+15V" I L 10000 5350 50 
+F14 "-15V" I L 10000 5250 50 
+F15 "+OUT_INT" O R 10850 5750 50 
+F16 "OCOM" I R 10850 6400 50 
+$EndSheet
+$Sheet
+S 10000 6900 850  1450
+U 60C8A7E7
+F0 "voltage measure" 50
+F1 "v_measure.sch" 50
+F2 "+SEN_INT" I R 10850 7200 50 
+F3 "-SEN_INT" I R 10850 7300 50 
+F4 "+15V" I L 10000 7150 50 
+F5 "-15V" I L 10000 7050 50 
+F6 "+15VOUT" I R 10850 7800 50 
+F7 "-15VOUT" I R 10850 7900 50 
+F8 "+5V" I L 10000 6950 50 
+F9 "VRANGEL" I L 10000 7500 50 
+F10 "VM" O L 10000 7800 50 
+F11 "OCOM" I R 10850 8150 50 
+$EndSheet
+Wire Wire Line
+	11950 7000 11950 7900
+Wire Wire Line
+	11950 7900 10850 7900
+Wire Wire Line
+	11850 6900 11850 7800
+Wire Wire Line
+	11850 7800 10850 7800
+Wire Wire Line
+	10850 7300 11500 7300
+Wire Wire Line
+	11500 7300 11500 6650
+Wire Wire Line
+	11400 6550 11400 7200
+Wire Wire Line
+	11400 7200 10850 7200
+Wire Wire Line
+	11950 6150 11950 5750
+Wire Wire Line
+	11950 5750 10850 5750
+Wire Wire Line
+	11850 6250 11850 5850
+Wire Wire Line
+	11850 5850 10850 5850
+Wire Wire Line
+	11950 6150 13000 6150
+Wire Wire Line
+	11850 6250 13000 6250
+Wire Wire Line
+	11400 6550 13000 6550
+Wire Wire Line
+	11500 6650 13000 6650
+Wire Wire Line
+	11850 6900 13000 6900
+Wire Wire Line
+	11950 7000 13000 7000
+$Sheet
+S 13000 4850 950  2450
+U 60D2C4D2
+F0 "frontend" 50
+F1 "frontend.sch" 50
+F2 "+5V" I L 13000 4900 50 
+F3 "+OUT_INT" I L 13000 6150 50 
+F4 "+Guard" I L 13000 6250 50 
+F5 "+SEN_INT" I L 13000 6550 50 
+F6 "-SEN_INT" I L 13000 6650 50 
+F7 "+15VOUT" O L 13000 6900 50 
+F8 "-15VOUT" O L 13000 7000 50 
+F9 "OCOM" O L 13000 7200 50 
+F10 "AMPGND" O L 13000 5850 50 
+F11 "+15V" I L 13000 5100 50 
+F12 "-15V" I L 13000 5000 50 
+F13 "AMPIN" I L 13000 5650 50 
+F14 "REMOTE" I L 13000 5350 50 
+F15 "ON" I L 13000 5250 50 
+$EndSheet
+Wire Wire Line
+	13000 5850 12100 5850
+Wire Wire Line
+	12100 5850 12100 5250
+Wire Wire Line
+	12100 5250 10850 5250
+Wire Wire Line
+	13000 5650 12300 5650
+Wire Wire Line
+	12300 5650 12300 4100
+Wire Wire Line
+	12300 4100 10850 4100
+Wire Wire Line
+	10850 8150 11200 8150
+Text Label 11200 8150 0    50   ~ 0
+OCOM
+Wire Wire Line
+	13000 7200 12700 7200
+Text Label 12700 7200 0    50   ~ 0
+OCOM
+Wire Wire Line
+	10850 6400 11100 6400
+Text Label 11100 6400 0    50   ~ 0
+OCOM
+Wire Wire Line
+	10850 4500 11150 4500
+Text Label 11150 4500 0    50   ~ 0
+OCOM
+Wire Wire Line
+	13000 4900 12700 4900
+Wire Wire Line
+	13000 5000 12700 5000
+Wire Wire Line
+	13000 5100 12700 5100
+Text Label 12700 4900 0    50   ~ 0
++5V
+Text Label 12700 5000 0    50   ~ 0
+-15V
+Text Label 12700 5100 0    50   ~ 0
++15V
+Wire Wire Line
+	10000 6950 9700 6950
+Wire Wire Line
+	10000 7050 9700 7050
+Wire Wire Line
+	10000 7150 9700 7150
+Text Label 9700 6950 0    50   ~ 0
++5V
+Text Label 9700 7050 0    50   ~ 0
+-15V
+Text Label 9700 7150 0    50   ~ 0
++15V
+Wire Wire Line
+	10000 5150 9700 5150
+Wire Wire Line
+	10000 5250 9700 5250
+Wire Wire Line
+	10000 5350 9700 5350
+Text Label 9700 5150 0    50   ~ 0
++5V
+Text Label 9700 5250 0    50   ~ 0
+-15V
+Text Label 9700 5350 0    50   ~ 0
++15V
+Wire Wire Line
+	10000 3250 9700 3250
+Wire Wire Line
+	10000 3350 9700 3350
+Wire Wire Line
+	10000 3450 9700 3450
+Text Label 9700 3250 0    50   ~ 0
++5V
+Text Label 9700 3350 0    50   ~ 0
+-15V
+Text Label 9700 3450 0    50   ~ 0
++15V
+Wire Wire Line
+	8750 7800 8750 7200
+Wire Wire Line
+	8750 7200 7800 7200
+Wire Wire Line
+	8750 7800 10000 7800
+Wire Wire Line
+	6300 5100 6800 5100
+Wire Wire Line
+	6800 5000 6200 5000
+Wire Wire Line
+	6200 6600 6800 6600
+Wire Wire Line
+	6800 3950 5750 3950
+Wire Wire Line
+	6800 4050 5750 4050
+Wire Wire Line
+	6800 4150 5750 4150
+Text Label 5750 3950 0    50   ~ 0
++5V
+Text Label 5750 4050 0    50   ~ 0
+-15V
+Text Label 5750 4150 0    50   ~ 0
++15V
+Wire Wire Line
+	4450 1000 4750 1000
+Wire Wire Line
+	4450 1100 4750 1100
+Wire Wire Line
+	4450 1200 4750 1200
+Text Label 4750 1000 2    50   ~ 0
++5V
+Text Label 4750 1100 2    50   ~ 0
+-15V
+Text Label 4750 1200 2    50   ~ 0
++15V
+Wire Wire Line
+	4450 1400 4750 1400
+Wire Wire Line
+	6800 3800 5750 3800
+Text Label 4750 1400 2    50   ~ 0
+reset
+Text Label 5750 3800 0    50   ~ 0
+reset
+Wire Wire Line
+	7800 6400 8850 6400
+$Sheet
+S 6800 6200 1000 1500
+U 6027FE65
+F0 "ADC" 50
+F1 "adc.sch" 50
+F2 "-2.5VREF" I L 6800 6600 50 
+F3 "VM" I R 7800 7200 50 
+F4 "IM" I R 7800 6400 50 
+F5 "~CS" I L 6800 7150 50 
+F6 "SCK" I L 6800 7250 50 
+F7 "MOSI" I L 6800 7350 50 
+F8 "MISO" O L 6800 7450 50 
+F9 "+5V" I L 6800 6350 50 
+F10 "+2.5VREF" I L 6800 6500 50 
+$EndSheet
+Wire Wire Line
+	8850 6400 8850 4500
+Wire Wire Line
+	8850 4500 10000 4500
+Connection ~ 8850 6400
+Wire Wire Line
+	8850 6400 10000 6400
+Wire Wire Line
+	8750 7200 8750 4400
+Wire Wire Line
+	8750 4400 10000 4400
+Connection ~ 8750 7200
+Wire Wire Line
+	6300 5100 6300 6500
+Wire Wire Line
+	6200 5000 6200 6600
+Wire Wire Line
+	7800 4000 10000 4000
+Wire Wire Line
+	7800 4150 10000 4150
+Wire Wire Line
+	7800 4250 10000 4250
+$Sheet
+S 3450 3900 900  2500
+U 60FF65CD
+F0 "Isolation and Controll" 50
+F1 "iso_ctrl.sch" 50
+F2 "+5VIN" I L 3450 4000 50 
+F3 "MOSI" I L 3450 4600 50 
+F4 "MISO" O L 3450 4700 50 
+F5 "CLAMP" O L 3450 4300 50 
+F6 "ISCK" O R 4350 4150 50 
+F7 "SCK" I L 3450 4500 50 
+F8 "IIC_SDA" B L 3450 5050 50 
+F9 "IIC_SCL" I L 3450 4950 50 
+F10 "IMOSI" O R 4350 4250 50 
+F11 "IMISO" I R 4350 4350 50 
+F12 "+5V" I R 4350 4000 50 
+F13 "IMODE" O R 4350 4700 50 
+F14 "VMODE" O R 4350 4800 50 
+F15 "REMOTE" O R 4350 4900 50 
+F16 "ON" O R 4350 5000 50 
+F17 "FDACLO" O R 4350 5100 50 
+F18 "VRANGEL" O R 4350 5200 50 
+F19 "10uA" O R 4350 5350 50 
+F20 "100uA" O R 4350 5450 50 
+F21 "1mA" O R 4350 5550 50 
+F22 "10mA" O R 4350 5650 50 
+F23 "100mA" O R 4350 5750 50 
+F24 "1A" O R 4350 5850 50 
+F25 "LT10mA" O R 4350 5950 50 
+F26 "ICLAMP" I R 4350 6100 50 
+F27 "CSADC" O R 4350 4550 50 
+F28 "CSDAC" O R 4350 4450 50 
+F29 "GND" I R 4350 6300 50 
+F30 "GND_CPU" I L 3450 6300 50 
+$EndSheet
+Text Label 1900 2100 0    50   ~ 0
++5VIN
+Wire Wire Line
+	2050 2500 1750 2500
+$Comp
+L power:GNDREF #PWR01
+U 1 1 6000F0EF
+P 3350 1650
+F 0 "#PWR01" H 3350 1400 50  0001 C CNN
+F 1 "GNDREF" H 3355 1477 50  0000 C CNN
+F 2 "" H 3350 1650 50  0001 C CNN
+F 3 "" H 3350 1650 50  0001 C CNN
+	1    3350 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2400 2500 2400
+Wire Wire Line
+	3150 4000 3450 4000
+Text Label 3150 4000 0    50   ~ 0
++5VIN
+Wire Wire Line
+	3550 1100 3200 1100
+Text Label 3200 1100 0    50   ~ 0
++12VIN
+Wire Wire Line
+	4350 6100 4700 6100
+Text Label 4700 6100 2    50   ~ 0
+ICLAMP
+Wire Wire Line
+	9650 3850 10000 3850
+Text Label 9650 3850 0    50   ~ 0
+ICLAMP
+Wire Wire Line
+	4350 4000 4650 4000
+Text Label 4650 4000 2    50   ~ 0
++5V
+Wire Wire Line
+	3450 4500 3150 4500
+Wire Wire Line
+	3450 4600 3150 4600
+Wire Wire Line
+	3450 4700 3150 4700
+Text Label 3150 4500 0    50   ~ 0
+SCK
+Text Label 3150 4600 0    50   ~ 0
+MOSI
+Text Label 3150 4700 0    50   ~ 0
+MISO
+Wire Wire Line
+	3150 4300 3450 4300
+Text Label 3150 4300 0    50   ~ 0
+CLAMP
+Wire Wire Line
+	1750 1800 2050 1800
+Wire Wire Line
+	1750 1900 2050 1900
+Text Label 2050 1800 2    50   ~ 0
+IIC_SCL
+Text Label 2050 1900 2    50   ~ 0
+IIC_SDA
+Wire Wire Line
+	3150 4950 3450 4950
+Wire Wire Line
+	3150 5050 3450 5050
+Text Label 3150 4950 0    50   ~ 0
+IIC_SCL
+Text Label 3150 5050 0    50   ~ 0
+IIC_SDA
+Wire Wire Line
+	6800 4450 6350 4450
+Wire Wire Line
+	6800 4550 6350 4550
+Wire Wire Line
+	6800 4650 6350 4650
+Text Label 6350 4450 0    50   ~ 0
+ISCK
+Text Label 6350 4550 0    50   ~ 0
+IMOSI
+Text Label 6350 4650 0    50   ~ 0
+IMISO
+Wire Wire Line
+	4800 4150 4350 4150
+Wire Wire Line
+	4800 4250 4350 4250
+Wire Wire Line
+	4800 4350 4350 4350
+Text Label 4800 4150 2    50   ~ 0
+ISCK
+Text Label 4800 4250 2    50   ~ 0
+IMOSI
+Text Label 4800 4350 2    50   ~ 0
+IMISO
+Wire Wire Line
+	4350 4450 4800 4450
+Wire Wire Line
+	4350 4550 4800 4550
+Text Label 4800 4450 2    50   ~ 0
+CS_DAC
+Text Label 4800 4550 2    50   ~ 0
+CS_ADC
+Wire Wire Line
+	6350 4350 6800 4350
+Wire Wire Line
+	6350 7150 6800 7150
+Text Label 6350 4350 0    50   ~ 0
+CS_DAC
+Text Label 6350 7150 0    50   ~ 0
+CS_ADC
+Wire Wire Line
+	4350 4700 4800 4700
+Wire Wire Line
+	4350 4800 4800 4800
+Wire Wire Line
+	4350 4900 4800 4900
+Wire Wire Line
+	4350 5000 4800 5000
+Wire Wire Line
+	4350 5100 4800 5100
+Wire Wire Line
+	4350 5200 4800 5200
+Wire Wire Line
+	4350 5350 4800 5350
+Wire Wire Line
+	4350 5450 4800 5450
+Wire Wire Line
+	4350 5550 4800 5550
+Wire Wire Line
+	4350 5650 4800 5650
+Wire Wire Line
+	4350 5750 4800 5750
+Wire Wire Line
+	4350 5850 4800 5850
+Wire Wire Line
+	4350 5950 4800 5950
+Text Label 4800 4700 2    50   ~ 0
+IMODE
+Text Label 4800 4800 2    50   ~ 0
+VMODE
+Text Label 4800 4900 2    50   ~ 0
+REMOTE
+Text Label 4800 5000 2    50   ~ 0
+ON
+Text Label 4800 5100 2    50   ~ 0
+FDACLO
+Text Label 4800 5200 2    50   ~ 0
+VRANGEL
+Text Label 4800 5350 2    50   ~ 0
+10uA
+Text Label 4800 5450 2    50   ~ 0
+100uA
+Text Label 4800 5550 2    50   ~ 0
+1mA
+Text Label 4800 5650 2    50   ~ 0
+10mA
+Text Label 4800 5750 2    50   ~ 0
+100mA
+Text Label 4800 5850 2    50   ~ 0
+1A
+Text Label 4800 5950 2    50   ~ 0
+LT10mA
+Wire Wire Line
+	9550 3600 10000 3600
+Wire Wire Line
+	9550 3700 10000 3700
+Wire Wire Line
+	12650 5350 13000 5350
+Wire Wire Line
+	12650 5250 13000 5250
+Wire Wire Line
+	6350 4850 6800 4850
+Wire Wire Line
+	9550 7500 10000 7500
+Wire Wire Line
+	9550 5550 10000 5550
+Wire Wire Line
+	9550 5650 10000 5650
+Wire Wire Line
+	9550 5750 10000 5750
+Wire Wire Line
+	9550 5850 10000 5850
+Wire Wire Line
+	9550 5950 10000 5950
+Wire Wire Line
+	9550 6050 10000 6050
+Wire Wire Line
+	9550 6150 10000 6150
+Text Label 9550 3600 0    50   ~ 0
+IMODE
+Text Label 9550 3700 0    50   ~ 0
+VMODE
+Text Label 12650 5350 0    50   ~ 0
+REMOTE
+Text Label 12650 5250 0    50   ~ 0
+ON
+Text Label 6350 4850 0    50   ~ 0
+FDACLO
+Text Label 9550 7500 0    50   ~ 0
+VRANGEL
+Text Label 9550 5550 0    50   ~ 0
+10uA
+Text Label 9550 5650 0    50   ~ 0
+100uA
+Text Label 9550 5750 0    50   ~ 0
+1mA
+Text Label 9550 5850 0    50   ~ 0
+10mA
+Text Label 9550 5950 0    50   ~ 0
+100mA
+Text Label 9550 6050 0    50   ~ 0
+1A
+Text Label 9550 6150 0    50   ~ 0
+LT10mA
+$Comp
+L power:GND1 #PWR?
+U 1 1 604D33E8
+P 4600 1650
+AR Path="/6046F04F/604D33E8" Ref="#PWR?"  Part="1" 
+AR Path="/604D33E8" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 4600 1400 50  0001 C CNN
+F 1 "GND1" H 4605 1477 50  0000 C CNN
+F 2 "" H 4600 1650 50  0001 C CNN
+F 3 "" H 4600 1650 50  0001 C CNN
+	1    4600 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1650 3350 1550
+Wire Wire Line
+	3350 1550 3550 1550
+Wire Wire Line
+	4600 1650 4600 1550
+Wire Wire Line
+	4600 1550 4450 1550
+Wire Wire Line
+	2300 2000 2300 2750
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 6051F088
+P 2300 2900
+F 0 "#PWR0102" H 2300 2650 50  0001 C CNN
+F 1 "GNDREF" H 2305 2727 50  0000 C CNN
+F 2 "" H 2300 2900 50  0001 C CNN
+F 3 "" H 2300 2900 50  0001 C CNN
+	1    2300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR?
+U 1 1 60539485
+P 4500 6400
+AR Path="/6046F04F/60539485" Ref="#PWR?"  Part="1" 
+AR Path="/60539485" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 4500 6150 50  0001 C CNN
+F 1 "GND1" H 4505 6227 50  0000 C CNN
+F 2 "" H 4500 6400 50  0001 C CNN
+F 3 "" H 4500 6400 50  0001 C CNN
+	1    4500 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 6400 4500 6300
+Wire Wire Line
+	4500 6300 4350 6300
+Wire Wire Line
+	2300 2750 2300 2900
+$Comp
+L power:GNDREF #PWR0104
+U 1 1 605425C9
+P 3250 6400
+F 0 "#PWR0104" H 3250 6150 50  0001 C CNN
+F 1 "GNDREF" H 3255 6227 50  0000 C CNN
+F 2 "" H 3250 6400 50  0001 C CNN
+F 3 "" H 3250 6400 50  0001 C CNN
+	1    3250 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 6400 3250 6300
+Wire Wire Line
+	3250 6300 3450 6300
+$Comp
+L power:GND1 #PWR?
+U 1 1 60572226
+P 6650 5350
+AR Path="/6046F04F/60572226" Ref="#PWR?"  Part="1" 
+AR Path="/60572226" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 6650 5100 50  0001 C CNN
+F 1 "GND1" H 6655 5177 50  0000 C CNN
+F 2 "" H 6650 5350 50  0001 C CNN
+F 3 "" H 6650 5350 50  0001 C CNN
+	1    6650 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 5350 6650 5250
+Wire Wire Line
+	6650 5250 6800 5250
+NoConn ~ 1750 2300
+Text Label 2050 2200 2    50   ~ 0
+CLAMP
+Wire Wire Line
+	1750 2200 2050 2200
+NoConn ~ 1750 1700
+$EndSCHEMATC

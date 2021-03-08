@@ -1,0 +1,958 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 9
+Title "DIY SMU"
+Date ""
+Rev "A"
+Comp "Hamre Engineering"
+Comment1 "Based on: http://www.djerickson.com/diy_smu/index.html"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND1 #PWR?
+U 1 1 604E9A30
+P 7450 2400
+AR Path="/604E9A30" Ref="#PWR?"  Part="1" 
+AR Path="/6046F04F/604E9A30" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 7450 2150 50  0001 C CNN
+F 1 "GND1" H 7455 2227 50  0000 C CNN
+F 2 "" H 7450 2400 50  0001 C CNN
+F 3 "" H 7450 2400 50  0001 C CNN
+	1    7450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 604E9EDC
+P 2350 5050
+AR Path="/604E9EDC" Ref="#PWR?"  Part="1" 
+AR Path="/6046F04F/604E9EDC" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 2350 4800 50  0001 C CNN
+F 1 "GNDREF" H 2355 4877 50  0000 C CNN
+F 2 "" H 2350 5050 50  0001 C CNN
+F 3 "" H 2350 5050 50  0001 C CNN
+	1    2350 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C1
+U 1 1 604EA5FF
+P 2350 4000
+F 0 "C1" H 2441 4046 50  0000 L CNN
+F 1 "47uf 25V" V 2450 3600 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_6.3x7.7" H 2350 4000 50  0001 C CNN
+F 3 "~" H 2350 4000 50  0001 C CNN
+F 4 "Panasonic" H 2350 4000 50  0001 C CNN "manufacturer"
+F 5 "EEE-1EA470WP" H 2350 4000 50  0001 C CNN "partnr"
+F 6 "Panasonic" H 2350 4000 50  0001 C CNN "Manufacturer"
+	1    2350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3700 2350 3700
+Wire Wire Line
+	2350 3700 2350 3900
+Wire Wire Line
+	2350 4100 2350 4500
+$Comp
+L Device:C_Small C2
+U 1 1 604EB3E3
+P 2650 4000
+F 0 "C2" H 2742 4046 50  0000 L CNN
+F 1 "4.7u 25V" V 2750 3600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2650 4000 50  0001 C CNN
+F 3 "~" H 2650 4000 50  0001 C CNN
+F 4 "Taiyo Yuden" H 2650 4000 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 2650 4000 50  0001 C CNN "partnr"
+	1    2650 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3700 2650 3700
+Wire Wire Line
+	2650 3700 2650 3900
+Connection ~ 2350 3700
+Wire Wire Line
+	2650 4100 2650 4500
+Wire Wire Line
+	2650 4500 2350 4500
+Connection ~ 2350 4500
+Wire Wire Line
+	2350 4500 2350 4800
+$Comp
+L Device:C_Small C3
+U 1 1 604ECE15
+P 4150 4050
+F 0 "C3" H 4242 4096 50  0000 L CNN
+F 1 "4.7u 25V" V 4250 3650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4150 4050 50  0001 C CNN
+F 3 "~" H 4150 4050 50  0001 C CNN
+F 4 "Taiyo Yuden" H 4150 4050 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 4150 4050 50  0001 C CNN "partnr"
+	1    4150 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3700 2650 3700
+Connection ~ 2650 3700
+Wire Wire Line
+	3300 4500 2650 4500
+Connection ~ 2650 4500
+$Comp
+L parts:DR331-105BE L1
+U 1 1 604F7F97
+P 3500 4100
+F 0 "L1" V 3454 3812 50  0000 R CNN
+F 1 "DR331-105BE" V 4000 4250 50  0000 R CNN
+F 2 "DYI SMU:dr331" H 3500 4100 50  0001 C CNN
+F 3 "https://www.bourns.com/pdfs/DR331.pdf" H 3500 4100 50  0001 C CNN
+F 4 "Bourns" V 3500 4100 50  0001 C CNN "manufacturer"
+F 5 "Bourns Inc." H 3500 4100 50  0001 C CNN "Manufacturer"
+F 6 "DR331-105BE" H 3500 4100 50  0001 C CNN "partnr"
+	1    3500 4100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3700 4500 4150 4500
+Wire Wire Line
+	4150 4500 4150 4150
+Wire Wire Line
+	4150 3950 4150 3700
+Wire Wire Line
+	4150 3700 3700 3700
+Connection ~ 4150 3700
+Wire Wire Line
+	4550 4500 4150 4500
+Connection ~ 4150 4500
+Wire Wire Line
+	4550 4150 4550 4500
+Wire Wire Line
+	4650 4150 4550 4150
+Wire Wire Line
+	4150 3700 4550 3700
+Wire Wire Line
+	4550 4050 4650 4050
+Wire Wire Line
+	4550 3700 4550 4050
+$Comp
+L parts:DPBW03F U1
+U 1 1 604FC325
+P 5200 4100
+F 0 "U1" H 5175 4515 50  0000 C CNN
+F 1 "DPBW03F" H 5175 4424 50  0000 C CNN
+F 2 "SamacSys_Parts:DPBW03F15" H 5200 4100 50  0001 C CNN
+F 3 "https://www.meanwellusa.com/productPdf.aspx?i=794" H 5200 4100 50  0001 C CNN
+F 4 "MEAN WELL USA Inc." H 5200 4100 50  0001 C CNN "Manufacturer"
+F 5 "DPBW03F-15" H 5200 4100 50  0001 C CNN "partnr"
+	1    5200 4100
+	1    0    0    -1  
+$EndComp
+Text Notes 4600 3450 0    50   ~ 0
+3W DC-DC 12V to +/- 15V\n
+$Comp
+L Device:C_Small C4
+U 1 1 60501B69
+P 5150 4850
+F 0 "C4" H 5242 4896 50  0000 L CNN
+F 1 ".01u 500V" V 5250 4450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5150 4850 50  0001 C CNN
+F 3 "~" H 5150 4850 50  0001 C CNN
+F 4 "Würth Elektronik " H 5150 4850 50  0001 C CNN "Manufacturer"
+F 5 "885342207014" H 5150 4850 50  0001 C CNN "partnr"
+	1    5150 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 4850 5800 4850
+Wire Wire Line
+	5800 4850 5800 4050
+Wire Wire Line
+	5800 4050 5700 4050
+Wire Wire Line
+	5050 4850 2350 4850
+Connection ~ 2350 4850
+Wire Wire Line
+	2350 4850 2350 5050
+Wire Wire Line
+	5800 4050 6250 4050
+Connection ~ 5800 4050
+$Comp
+L Device:C_Small C8
+U 1 1 60504A97
+P 6550 3550
+F 0 "C8" H 6642 3596 50  0000 L CNN
+F 1 "4.7u 25V" V 6650 3150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6550 3550 50  0001 C CNN
+F 3 "~" H 6550 3550 50  0001 C CNN
+F 4 "Taiyo Yuden" H 6550 3550 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 6550 3550 50  0001 C CNN "partnr"
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C6
+U 1 1 60505465
+P 6250 3550
+F 0 "C6" H 6341 3596 50  0000 L CNN
+F 1 "47uf 25V" V 6350 3150 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_6.3x7.7" H 6250 3550 50  0001 C CNN
+F 3 "~" H 6250 3550 50  0001 C CNN
+F 4 "Panasonic" H 6250 3550 50  0001 C CNN "manufacturer"
+F 5 "EEE-1EA470WP" H 6250 3550 50  0001 C CNN "partnr"
+F 6 "Panasonic" H 6250 3550 50  0001 C CNN "Manufacturer"
+	1    6250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3950 6000 3950
+Wire Wire Line
+	6000 3950 6000 3250
+Wire Wire Line
+	6000 3250 6100 3250
+Wire Wire Line
+	6250 3450 6250 3250
+Connection ~ 6250 3250
+Wire Wire Line
+	6250 3250 6550 3250
+Wire Wire Line
+	6250 3650 6250 4050
+Connection ~ 6250 4050
+Wire Wire Line
+	6250 4050 6300 4050
+Wire Wire Line
+	6550 3450 6550 3250
+Connection ~ 6550 3250
+Wire Wire Line
+	6550 3250 6950 3250
+Wire Wire Line
+	6550 3650 6550 4050
+Connection ~ 6550 4050
+$Comp
+L Device:C_Small C10
+U 1 1 60508415
+P 6950 3550
+F 0 "C10" H 7042 3596 50  0000 L CNN
+F 1 ".1u" V 7050 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6950 3550 50  0001 C CNN
+F 3 "~" H 6950 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 6950 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 6950 3550 50  0001 C CNN "partnr"
+	1    6950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 60508852
+P 7250 3550
+F 0 "C12" H 7342 3596 50  0000 L CNN
+F 1 ".1u" V 7350 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7250 3550 50  0001 C CNN
+F 3 "~" H 7250 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7250 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7250 3550 50  0001 C CNN "partnr"
+	1    7250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 60508C58
+P 7550 3550
+F 0 "C14" H 7642 3596 50  0000 L CNN
+F 1 ".1u" V 7650 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7550 3550 50  0001 C CNN
+F 3 "~" H 7550 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7550 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7550 3550 50  0001 C CNN "partnr"
+	1    7550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C16
+U 1 1 60509058
+P 7800 3550
+F 0 "C16" H 7892 3596 50  0000 L CNN
+F 1 ".1u" V 7900 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7800 3550 50  0001 C CNN
+F 3 "~" H 7800 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7800 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7800 3550 50  0001 C CNN "partnr"
+	1    7800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3650 6950 4050
+Connection ~ 6950 4050
+Wire Wire Line
+	7250 3650 7250 4050
+Connection ~ 7250 4050
+Wire Wire Line
+	7550 3650 7550 4050
+Connection ~ 7550 4050
+Wire Wire Line
+	7550 4050 7600 4050
+Wire Wire Line
+	7800 3650 7800 4050
+Wire Wire Line
+	6950 3450 6950 3250
+Connection ~ 6950 3250
+Wire Wire Line
+	6950 3250 7250 3250
+Wire Wire Line
+	7250 3450 7250 3250
+Connection ~ 7250 3250
+Wire Wire Line
+	7250 3250 7550 3250
+Wire Wire Line
+	7550 3450 7550 3250
+Connection ~ 7550 3250
+Wire Wire Line
+	7550 3250 7800 3250
+Wire Wire Line
+	7800 3450 7800 3250
+Connection ~ 7800 3250
+Wire Wire Line
+	5700 4150 6000 4150
+Wire Wire Line
+	6000 4150 6000 4850
+Wire Wire Line
+	6000 4850 6300 4850
+$Comp
+L Device:C_Small C9
+U 1 1 605153C9
+P 6600 4350
+F 0 "C9" H 6692 4396 50  0000 L CNN
+F 1 "4.7u 25V" V 6700 3950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6600 4350 50  0001 C CNN
+F 3 "~" H 6600 4350 50  0001 C CNN
+F 4 "Taiyo Yuden" H 6600 4350 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 6600 4350 50  0001 C CNN "partnr"
+	1    6600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C7
+U 1 1 605153CF
+P 6300 4350
+F 0 "C7" H 6391 4396 50  0000 L CNN
+F 1 "47uf 25V" V 6400 3950 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_6.3x7.7" H 6300 4350 50  0001 C CNN
+F 3 "~" H 6300 4350 50  0001 C CNN
+F 4 "Panasonic" H 6300 4350 50  0001 C CNN "manufacturer"
+F 5 "EEE-1EA470WP" H 6300 4350 50  0001 C CNN "partnr"
+F 6 "Panasonic" H 6300 4350 50  0001 C CNN "Manufacturer"
+	1    6300 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4450 6300 4850
+Wire Wire Line
+	6600 4250 6600 4050
+Wire Wire Line
+	6600 4450 6600 4850
+$Comp
+L Device:C_Small C11
+U 1 1 605153D9
+P 7000 4350
+F 0 "C11" H 7092 4396 50  0000 L CNN
+F 1 ".1u" V 7100 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7000 4350 50  0001 C CNN
+F 3 "~" H 7000 4350 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7000 4350 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7000 4350 50  0001 C CNN "partnr"
+	1    7000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 605153DF
+P 7300 4350
+F 0 "C13" H 7392 4396 50  0000 L CNN
+F 1 ".1u" V 7400 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7300 4350 50  0001 C CNN
+F 3 "~" H 7300 4350 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7300 4350 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7300 4350 50  0001 C CNN "partnr"
+	1    7300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 605153E5
+P 7600 4350
+F 0 "C15" H 7692 4396 50  0000 L CNN
+F 1 ".1u" V 7700 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7600 4350 50  0001 C CNN
+F 3 "~" H 7600 4350 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7600 4350 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7600 4350 50  0001 C CNN "partnr"
+	1    7600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C17
+U 1 1 605153EB
+P 7850 4350
+F 0 "C17" H 7942 4396 50  0000 L CNN
+F 1 ".1u" V 7950 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7850 4350 50  0001 C CNN
+F 3 "~" H 7850 4350 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 7850 4350 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 7850 4350 50  0001 C CNN "partnr"
+	1    7850 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4450 7000 4850
+Wire Wire Line
+	7300 4450 7300 4850
+Wire Wire Line
+	7600 4450 7600 4850
+Wire Wire Line
+	7850 4450 7850 4850
+Wire Wire Line
+	7000 4250 7000 4050
+Wire Wire Line
+	7300 4250 7300 4050
+Wire Wire Line
+	7600 4250 7600 4050
+Wire Wire Line
+	7850 4250 7850 4050
+Connection ~ 6300 4050
+Wire Wire Line
+	6300 4050 6550 4050
+Wire Wire Line
+	6550 4050 6600 4050
+Connection ~ 6600 4050
+Wire Wire Line
+	6600 4050 6950 4050
+Wire Wire Line
+	6950 4050 7000 4050
+Wire Wire Line
+	6300 4050 6300 4250
+Connection ~ 7000 4050
+Wire Wire Line
+	7000 4050 7250 4050
+Wire Wire Line
+	7250 4050 7300 4050
+Connection ~ 7300 4050
+Wire Wire Line
+	7300 4050 7550 4050
+Connection ~ 7600 4050
+Wire Wire Line
+	7600 4050 7800 4050
+Wire Wire Line
+	7850 4050 7800 4050
+Connection ~ 7800 4050
+Connection ~ 6300 4850
+Wire Wire Line
+	6300 4850 6600 4850
+Connection ~ 6600 4850
+Wire Wire Line
+	6600 4850 7000 4850
+Connection ~ 7000 4850
+Wire Wire Line
+	7000 4850 7300 4850
+Connection ~ 7300 4850
+Wire Wire Line
+	7300 4850 7600 4850
+Connection ~ 7600 4850
+Wire Wire Line
+	7600 4850 7850 4850
+Connection ~ 7850 4850
+$Comp
+L Device:C_Small C19
+U 1 1 60522CB2
+P 8100 4350
+F 0 "C19" H 8192 4396 50  0000 L CNN
+F 1 ".1u" V 8200 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8100 4350 50  0001 C CNN
+F 3 "~" H 8100 4350 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 8100 4350 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 8100 4350 50  0001 C CNN "partnr"
+	1    8100 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4450 8100 4850
+Wire Wire Line
+	8100 4250 8100 4050
+Wire Wire Line
+	7850 4050 8100 4050
+Connection ~ 7850 4050
+Wire Wire Line
+	7850 4850 8100 4850
+Connection ~ 8100 4850
+$Comp
+L Device:C_Small C22
+U 1 1 6052D1C4
+P 8750 3550
+F 0 "C22" H 8842 3596 50  0000 L CNN
+F 1 ".1u" V 8850 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8750 3550 50  0001 C CNN
+F 3 "~" H 8750 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 8750 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 8750 3550 50  0001 C CNN "partnr"
+	1    8750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3650 8750 4050
+Wire Wire Line
+	8750 3450 8750 3250
+$Comp
+L Device:C_Small C24
+U 1 1 6052D1CC
+P 9000 3550
+F 0 "C24" H 9092 3596 50  0000 L CNN
+F 1 ".1u" V 9100 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9000 3550 50  0001 C CNN
+F 3 "~" H 9000 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9000 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9000 3550 50  0001 C CNN "partnr"
+	1    9000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C27
+U 1 1 6052D1D2
+P 9250 3550
+F 0 "C27" H 9342 3596 50  0000 L CNN
+F 1 ".1u" V 9350 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9250 3550 50  0001 C CNN
+F 3 "~" H 9250 3550 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9250 3550 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9250 3550 50  0001 C CNN "partnr"
+	1    9250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3650 9000 4050
+Wire Wire Line
+	9250 3650 9250 4050
+Wire Wire Line
+	9000 3450 9000 3250
+Wire Wire Line
+	9250 3450 9250 3250
+$Comp
+L Device:C_Small C26
+U 1 1 6052F981
+P 9050 4400
+F 0 "C26" H 9142 4446 50  0000 L CNN
+F 1 ".1u" V 9150 4200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9050 4400 50  0001 C CNN
+F 3 "~" H 9050 4400 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9050 4400 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9050 4400 50  0001 C CNN "partnr"
+	1    9050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3250 8750 3250
+Connection ~ 8750 3250
+Wire Wire Line
+	8750 3250 9000 3250
+Connection ~ 9000 3250
+Wire Wire Line
+	9000 3250 9250 3250
+Connection ~ 9250 3250
+Wire Wire Line
+	9250 3250 9700 3250
+Wire Wire Line
+	8750 4050 9000 4050
+Connection ~ 9000 4050
+Wire Wire Line
+	9000 4050 9050 4050
+Connection ~ 9050 4050
+Wire Wire Line
+	9050 4050 9250 4050
+Wire Wire Line
+	9050 4050 9050 4300
+Wire Wire Line
+	9050 4500 9050 4850
+Connection ~ 9050 4850
+Wire Wire Line
+	9050 4850 9700 4850
+Wire Wire Line
+	8100 4850 9050 4850
+$Comp
+L Regulator_Linear:LT1117-5.0 U2
+U 1 1 6057E544
+P 7450 1600
+F 0 "U2" H 7450 1842 50  0000 C CNN
+F 1 "LT1117-5.0" H 7450 1751 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 7450 1600 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1117fd.pdf" H 7450 1600 50  0001 C CNN
+F 4 "ON Semi" H 7450 1600 50  0001 C CNN "Manufacturer"
+F 5 "NCP1117LPST50T3G" H 7450 1600 50  0001 C CNN "partnr"
+	1    7450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 1900 7450 2350
+Wire Wire Line
+	7150 1600 6100 1600
+Wire Wire Line
+	6100 1600 6100 3250
+Connection ~ 6100 3250
+Wire Wire Line
+	6100 3250 6250 3250
+Wire Wire Line
+	7750 1600 8000 1600
+$Comp
+L Device:C_Small C18
+U 1 1 605885EF
+P 8000 1900
+F 0 "C18" H 8092 1946 50  0000 L CNN
+F 1 "4.7u 25V" V 8100 1500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8000 1900 50  0001 C CNN
+F 3 "~" H 8000 1900 50  0001 C CNN
+F 4 "Taiyo Yuden" H 8000 1900 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 8000 1900 50  0001 C CNN "partnr"
+	1    8000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C20
+U 1 1 60588B94
+P 8250 1900
+F 0 "C20" H 8342 1946 50  0000 L CNN
+F 1 "4.7u 25V" V 8350 1500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8250 1900 50  0001 C CNN
+F 3 "~" H 8250 1900 50  0001 C CNN
+F 4 "Taiyo Yuden" H 8250 1900 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 8250 1900 50  0001 C CNN "partnr"
+	1    8250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C21
+U 1 1 60588CFD
+P 8550 1900
+F 0 "C21" H 8642 1946 50  0000 L CNN
+F 1 ".1u" V 8650 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8550 1900 50  0001 C CNN
+F 3 "~" H 8550 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 8550 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 8550 1900 50  0001 C CNN "partnr"
+	1    8550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C23
+U 1 1 6058924A
+P 8800 1900
+F 0 "C23" H 8892 1946 50  0000 L CNN
+F 1 ".1u" V 8900 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8800 1900 50  0001 C CNN
+F 3 "~" H 8800 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 8800 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 8800 1900 50  0001 C CNN "partnr"
+	1    8800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C25
+U 1 1 60589541
+P 9050 1900
+F 0 "C25" H 9142 1946 50  0000 L CNN
+F 1 ".1u" V 9150 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9050 1900 50  0001 C CNN
+F 3 "~" H 9050 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9050 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9050 1900 50  0001 C CNN "partnr"
+	1    9050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C28
+U 1 1 6058985E
+P 9300 1900
+F 0 "C28" H 9392 1946 50  0000 L CNN
+F 1 ".1u" V 9400 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9300 1900 50  0001 C CNN
+F 3 "~" H 9300 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9300 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9300 1900 50  0001 C CNN "partnr"
+	1    9300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C29
+U 1 1 60589A6B
+P 9550 1900
+F 0 "C29" H 9642 1946 50  0000 L CNN
+F 1 ".1u" V 9650 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9550 1900 50  0001 C CNN
+F 3 "~" H 9550 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9550 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9550 1900 50  0001 C CNN "partnr"
+	1    9550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C30
+U 1 1 60589C28
+P 9800 1900
+F 0 "C30" H 9892 1946 50  0000 L CNN
+F 1 ".1u" V 9900 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9800 1900 50  0001 C CNN
+F 3 "~" H 9800 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 9800 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 9800 1900 50  0001 C CNN "partnr"
+	1    9800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C31
+U 1 1 60589E06
+P 10050 1900
+F 0 "C31" H 10142 1946 50  0000 L CNN
+F 1 ".1u" V 10150 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10050 1900 50  0001 C CNN
+F 3 "~" H 10050 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 10050 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 10050 1900 50  0001 C CNN "partnr"
+	1    10050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2350 8000 2350
+Wire Wire Line
+	10050 2350 10050 2000
+Connection ~ 7450 2350
+Wire Wire Line
+	7450 2350 7450 2400
+Wire Wire Line
+	10050 1800 10050 1600
+Connection ~ 10050 1600
+Wire Wire Line
+	10050 1600 10300 1600
+Wire Wire Line
+	9800 1800 9800 1600
+Connection ~ 9800 1600
+Wire Wire Line
+	9800 1600 10050 1600
+Wire Wire Line
+	9550 1800 9550 1600
+Connection ~ 9550 1600
+Wire Wire Line
+	9550 1600 9800 1600
+Wire Wire Line
+	9300 1800 9300 1600
+Connection ~ 9300 1600
+Wire Wire Line
+	9300 1600 9550 1600
+Wire Wire Line
+	9050 1800 9050 1600
+Connection ~ 9050 1600
+Wire Wire Line
+	9050 1600 9300 1600
+Wire Wire Line
+	8800 1800 8800 1600
+Connection ~ 8800 1600
+Wire Wire Line
+	8800 1600 9050 1600
+Wire Wire Line
+	8550 1800 8550 1600
+Connection ~ 8550 1600
+Wire Wire Line
+	8550 1600 8800 1600
+Wire Wire Line
+	8250 1600 8250 1800
+Connection ~ 8250 1600
+Wire Wire Line
+	8250 1600 8550 1600
+Wire Wire Line
+	8000 1800 8000 1600
+Connection ~ 8000 1600
+Wire Wire Line
+	8000 1600 8250 1600
+Wire Wire Line
+	8000 2000 8000 2350
+Connection ~ 8000 2350
+Wire Wire Line
+	8000 2350 8250 2350
+Wire Wire Line
+	8250 2000 8250 2350
+Connection ~ 8250 2350
+Wire Wire Line
+	8250 2350 8550 2350
+Wire Wire Line
+	8550 2000 8550 2350
+Connection ~ 8550 2350
+Wire Wire Line
+	8550 2350 8800 2350
+Wire Wire Line
+	8800 2000 8800 2350
+Connection ~ 8800 2350
+Wire Wire Line
+	8800 2350 9050 2350
+Wire Wire Line
+	9050 2000 9050 2350
+Connection ~ 9050 2350
+Wire Wire Line
+	9050 2350 9300 2350
+Wire Wire Line
+	9300 2000 9300 2350
+Connection ~ 9300 2350
+Wire Wire Line
+	9300 2350 9550 2350
+Wire Wire Line
+	9550 2000 9550 2350
+Connection ~ 9550 2350
+Wire Wire Line
+	9550 2350 9800 2350
+Wire Wire Line
+	9800 2000 9800 2350
+Connection ~ 9800 2350
+Wire Wire Line
+	9800 2350 10050 2350
+Text HLabel 1850 3700 0    50   Input ~ 0
++12VIN
+Text HLabel 9700 3250 2    50   Output ~ 0
++15V
+Text HLabel 9700 4850 2    50   Output ~ 0
+-15V
+$Comp
+L Device:CP1_Small C5
+U 1 1 6086A663
+P 5500 1100
+F 0 "C5" V 5272 1100 50  0000 C CNN
+F 1 ".1u" V 5350 1100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 5500 1100 50  0001 C CNN
+F 3 "~" H 5500 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 5500 1100 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 5500 1100 50  0001 C CNN "partnr"
+	1    5500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 6086A669
+P 5150 900
+F 0 "R1" V 4945 900 50  0000 C CNN
+F 1 "100K" V 5036 900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 5150 900 50  0001 C CNN
+F 3 "~" H 5150 900 50  0001 C CNN
+F 4 "Yageo" H 5150 900 50  0001 C CNN "Manufacturer"
+F 5 "RC0603JR-07100KL" H 5150 900 50  0001 C CNN "partnr"
+	1    5150 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 900  5500 900 
+Wire Wire Line
+	5500 900  5500 1000
+Wire Wire Line
+	5500 900  5750 900 
+Connection ~ 5500 900 
+$Comp
+L power:GND1 #PWR03
+U 1 1 6086A673
+P 5500 1300
+F 0 "#PWR03" H 5500 1050 50  0001 C CNN
+F 1 "GND1" H 5505 1127 50  0000 C CNN
+F 2 "" H 5500 1300 50  0001 C CNN
+F 3 "" H 5500 1300 50  0001 C CNN
+	1    5500 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1300 5500 1200
+Text Label 5500 900  0    50   ~ 0
+reset
+Text Label 4800 900  2    50   ~ 0
++5V
+Wire Wire Line
+	5050 900  4800 900 
+Text HLabel 5750 900  2    50   Output ~ 0
+reset
+Wire Wire Line
+	1850 4800 2350 4800
+Connection ~ 2350 4800
+Wire Wire Line
+	2350 4800 2350 4850
+Text HLabel 1850 4800 0    50   Input ~ 0
+GND_CPU
+Wire Wire Line
+	5000 1300 5500 1300
+Text HLabel 5000 1300 0    50   Input ~ 0
+GND
+Connection ~ 5500 1300
+Text HLabel 10900 1600 2    50   Output ~ 0
++5V
+$Comp
+L Device:C_Small C39
+U 1 1 603882F8
+P 10300 1900
+F 0 "C39" H 10392 1946 50  0000 L CNN
+F 1 ".1u" V 10400 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10300 1900 50  0001 C CNN
+F 3 "~" H 10300 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 10300 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 10300 1900 50  0001 C CNN "partnr"
+	1    10300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C47
+U 1 1 603882FE
+P 10550 1900
+F 0 "C47" H 10642 1946 50  0000 L CNN
+F 1 ".1u" V 10650 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10550 1900 50  0001 C CNN
+F 3 "~" H 10550 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 10550 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 10550 1900 50  0001 C CNN "partnr"
+	1    10550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C58
+U 1 1 60388304
+P 10800 1900
+F 0 "C58" H 10892 1946 50  0000 L CNN
+F 1 ".1u" V 10900 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10800 1900 50  0001 C CNN
+F 3 "~" H 10800 1900 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 10800 1900 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 10800 1900 50  0001 C CNN "partnr"
+	1    10800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 2350 10800 2000
+Wire Wire Line
+	10550 1800 10550 1600
+Wire Wire Line
+	10300 1800 10300 1600
+Wire Wire Line
+	10300 2000 10300 2350
+Wire Wire Line
+	10550 2000 10550 2350
+Connection ~ 10300 1600
+Wire Wire Line
+	10300 1600 10550 1600
+Connection ~ 10550 1600
+Wire Wire Line
+	10550 1600 10800 1600
+Wire Wire Line
+	10800 1800 10800 1600
+Connection ~ 10800 1600
+Wire Wire Line
+	10800 1600 10900 1600
+Wire Wire Line
+	10800 2350 10550 2350
+Connection ~ 10050 2350
+Connection ~ 10300 2350
+Wire Wire Line
+	10300 2350 10050 2350
+Connection ~ 10550 2350
+Wire Wire Line
+	10550 2350 10300 2350
+$EndSCHEMATC

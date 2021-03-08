@@ -1,0 +1,826 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 7850 1050 0    50   ~ 0
+Control registers\n
+$Comp
+L Interface_Expansion:MCP23017_SO U?
+U 1 1 60FFEBFF
+P 8100 2700
+AR Path="/60FFEBFF" Ref="U?"  Part="1" 
+AR Path="/60FF65CD/60FFEBFF" Ref="U27"  Part="1" 
+F 0 "U27" H 8350 3750 50  0000 C CNN
+F 1 "MCP23017_SO" H 8400 3650 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-28W_7.5x17.9mm_Pitch1.27mm" H 8300 1700 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 8300 1600 50  0001 L CNN
+F 4 "Microchip Technology" H 8100 2700 50  0001 C CNN "Manufacturer"
+F 5 "MCP23017T-E/SO" H 8100 2700 50  0001 C CNN "partnr"
+	1    8100 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:ISO1541 U?
+U 1 1 61005AFA
+P 4150 4400
+AR Path="/61005AFA" Ref="U?"  Part="1" 
+AR Path="/60FF65CD/61005AFA" Ref="U26"  Part="1" 
+F 0 "U26" H 4150 4767 50  0000 C CNN
+F 1 "ISO1541" H 4150 4676 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4150 4050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/iso1541.pdf" H 4150 4450 50  0001 C CNN
+F 4 "Texas Instruments" H 4150 4400 50  0001 C CNN "Manufacturer"
+F 5 "ISO1541QDRQ1" H 4150 4400 50  0001 C CNN "partnr"
+	1    4150 4400
+	1    0    0    -1  
+$EndComp
+Text Label 1800 1450 0    50   ~ 0
++5VIN
+Wire Wire Line
+	3400 2150 3750 2150
+Wire Wire Line
+	3400 2250 3750 2250
+Wire Wire Line
+	3400 2350 3750 2350
+Text Label 3400 2150 0    50   ~ 0
+SCK
+Text Label 3400 2250 0    50   ~ 0
+MOSI
+Text Label 3400 2350 0    50   ~ 0
+MISO
+Wire Wire Line
+	3750 4600 3650 4600
+Wire Wire Line
+	3650 4600 3650 4800
+Wire Wire Line
+	3750 2650 3650 2650
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6102A4C6
+P 3650 4800
+AR Path="/6102A4C6" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/6102A4C6" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 3650 4550 50  0001 C CNN
+F 1 "GNDREF" H 3655 4627 50  0000 C CNN
+F 2 "" H 3650 4800 50  0001 C CNN
+F 3 "" H 3650 4800 50  0001 C CNN
+	1    3650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6102A4CC
+P 3650 2850
+AR Path="/6102A4CC" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/6102A4CC" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 3650 2600 50  0001 C CNN
+F 1 "GNDREF" H 3655 2677 50  0000 C CNN
+F 2 "" H 3650 2850 50  0001 C CNN
+F 3 "" H 3650 2850 50  0001 C CNN
+	1    3650 2850
+	1    0    0    -1  
+$EndComp
+Text Label 4750 1850 0    50   ~ 0
++5V
+Wire Wire Line
+	3450 1850 3600 1850
+Wire Wire Line
+	4550 2150 4850 2150
+Wire Wire Line
+	4550 2250 4850 2250
+Wire Wire Line
+	4550 2350 4850 2350
+$Comp
+L power:GND1 #PWR?
+U 1 1 61059D70
+P 4700 2850
+AR Path="/61059D70" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/61059D70" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/61059D70" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 4700 2600 50  0001 C CNN
+F 1 "GND1" H 4705 2677 50  0000 C CNN
+F 2 "" H 4700 2850 50  0001 C CNN
+F 3 "" H 4700 2850 50  0001 C CNN
+	1    4700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2650 4700 2650
+Wire Wire Line
+	4700 2650 4700 2750
+$Comp
+L power:GND1 #PWR?
+U 1 1 6105C0A6
+P 4650 4800
+AR Path="/6105C0A6" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/6105C0A6" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/6105C0A6" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 4650 4550 50  0001 C CNN
+F 1 "GND1" H 4655 4627 50  0000 C CNN
+F 2 "" H 4650 4800 50  0001 C CNN
+F 3 "" H 4650 4800 50  0001 C CNN
+	1    4650 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4600 4650 4600
+Wire Wire Line
+	4650 4600 4650 4800
+Text HLabel 1600 1450 0    50   Input ~ 0
++5VIN
+Wire Wire Line
+	4550 1850 4650 1850
+Wire Wire Line
+	3650 2650 3650 2850
+Text HLabel 3400 2150 0    50   Input ~ 0
+SCK
+Text HLabel 3400 2250 0    50   Input ~ 0
+MOSI
+Text HLabel 3400 2350 0    50   Output ~ 0
+MISO
+Text Label 3450 1850 0    50   ~ 0
++5VIN
+Wire Wire Line
+	3450 4300 3750 4300
+Text Label 3450 4300 0    50   ~ 0
++5VIN
+Text Label 4750 4300 0    50   ~ 0
++5V
+Wire Wire Line
+	4550 4300 4750 4300
+Wire Wire Line
+	3750 4400 2900 4400
+Wire Wire Line
+	3750 4500 3200 4500
+Text HLabel 2600 4400 0    50   BiDi ~ 0
+IIC_SDA
+Text HLabel 2600 4500 0    50   Input ~ 0
+IIC_SCL
+Wire Wire Line
+	4550 4500 5150 4500
+Text Label 5600 4500 0    50   ~ 0
+ISCL
+$Comp
+L Memory_EEPROM:24LC01 U28
+U 1 1 6019E6B4
+P 8350 5350
+F 0 "U28" H 8450 5700 50  0000 C CNN
+F 1 "24LC01" H 8550 5600 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8350 5350 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21711J.pdf" H 8350 5350 50  0001 C CNN
+F 4 "Microchip Technology" H 8350 5350 50  0001 C CNN "Manufacturer"
+F 5 "24LC01B/SN" H 8350 5350 50  0001 C CNN "partnr"
+	1    8350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R73
+U 1 1 601A18D7
+P 5150 4000
+F 0 "R73" H 5218 4046 50  0000 L CNN
+F 1 "1.5K" H 5218 3955 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 5150 4000 50  0001 C CNN
+F 3 "~" H 5150 4000 50  0001 C CNN
+F 4 "Yageo" H 5150 4000 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-071K5L" H 5150 4000 50  0001 C CNN "partnr"
+	1    5150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R74
+U 1 1 601A2C56
+P 5450 4000
+F 0 "R74" H 5518 4046 50  0000 L CNN
+F 1 "1.5K" H 5518 3955 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 5450 4000 50  0001 C CNN
+F 3 "~" H 5450 4000 50  0001 C CNN
+F 4 "Yageo" H 5450 4000 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-071K5L" H 5450 4000 50  0001 C CNN "partnr"
+	1    5450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R71
+U 1 1 601A4370
+P 2900 4050
+F 0 "R71" H 2968 4096 50  0000 L CNN
+F 1 "1.5K" H 2968 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 2900 4050 50  0001 C CNN
+F 3 "~" H 2900 4050 50  0001 C CNN
+F 4 "Yageo" H 2900 4050 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-071K5L" H 2900 4050 50  0001 C CNN "partnr"
+	1    2900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R72
+U 1 1 601A4376
+P 3200 4050
+F 0 "R72" H 3268 4096 50  0000 L CNN
+F 1 "1.5K" H 3268 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 3200 4050 50  0001 C CNN
+F 3 "~" H 3200 4050 50  0001 C CNN
+F 4 "Yageo" H 3200 4050 50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-071K5L" H 3200 4050 50  0001 C CNN "partnr"
+	1    3200 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4150 2900 4400
+Connection ~ 2900 4400
+Wire Wire Line
+	2900 4400 2600 4400
+Wire Wire Line
+	3200 4150 3200 4500
+Connection ~ 3200 4500
+Wire Wire Line
+	3200 4500 2600 4500
+Wire Wire Line
+	5150 4100 5150 4500
+Connection ~ 5150 4500
+Wire Wire Line
+	2900 3950 2900 3750
+Wire Wire Line
+	2900 3750 3200 3750
+Wire Wire Line
+	3200 3750 3200 3950
+Wire Wire Line
+	5150 3900 5150 3750
+Wire Wire Line
+	5150 3750 5450 3750
+Wire Wire Line
+	5450 3750 5450 3900
+Text Label 5250 3750 0    50   ~ 0
++5V
+Text Label 2900 3750 0    50   ~ 0
++5VIN
+$Comp
+L Isolator:Si8642BB-B-IS1 U25
+U 1 1 601AA963
+P 4150 2250
+F 0 "U25" H 4150 2917 50  0000 C CNN
+F 1 "Si8642BB-B-IS1" H 4150 2826 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 4150 1700 50  0001 C CIN
+F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 4150 2650 50  0001 C CNN
+F 4 "Silicon Labs" H 4150 2250 50  0001 C CNN "Manufacturer"
+F 5 "SI8642BB-B-IS1" H 4150 2250 50  0001 C CNN "partnr"
+	1    4150 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2450 3750 2450
+Text HLabel 3400 2450 0    50   Output ~ 0
+CLAMP
+Text HLabel 4850 2150 2    50   Output ~ 0
+ISCK
+Text HLabel 4850 2250 2    50   Output ~ 0
+IMOSI
+Text HLabel 4850 2350 2    50   Input ~ 0
+IMISO
+Wire Wire Line
+	7400 1900 7100 1900
+Wire Wire Line
+	7400 2000 7100 2000
+Text Label 7100 1900 0    50   ~ 0
+ISDA
+Text Label 7100 2000 0    50   ~ 0
+ISCL
+Text Label 9050 5350 2    50   ~ 0
+ISCL
+Text Label 9050 5250 2    50   ~ 0
+ISDA
+Wire Wire Line
+	9050 5350 8750 5350
+Wire Wire Line
+	9050 5250 8750 5250
+$Comp
+L power:GND1 #PWR?
+U 1 1 601C0211
+P 8350 5800
+AR Path="/601C0211" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/601C0211" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/601C0211" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 8350 5550 50  0001 C CNN
+F 1 "GND1" H 8355 5627 50  0000 C CNN
+F 2 "" H 8350 5800 50  0001 C CNN
+F 3 "" H 8350 5800 50  0001 C CNN
+	1    8350 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 5650 8350 5800
+Text Label 8350 4750 0    50   ~ 0
++5V
+Wire Wire Line
+	8350 4750 8350 5050
+Wire Wire Line
+	8750 5450 8950 5450
+Wire Wire Line
+	8950 5450 8950 5800
+$Comp
+L power:GND1 #PWR?
+U 1 1 601C4085
+P 8950 5800
+AR Path="/601C4085" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/601C4085" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/601C4085" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 8950 5550 50  0001 C CNN
+F 1 "GND1" H 8955 5627 50  0000 C CNN
+F 2 "" H 8950 5800 50  0001 C CNN
+F 3 "" H 8950 5800 50  0001 C CNN
+	1    8950 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR?
+U 1 1 601C5535
+P 7550 5800
+AR Path="/601C5535" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/601C5535" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/601C5535" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 7550 5550 50  0001 C CNN
+F 1 "GND1" H 7555 5627 50  0000 C CNN
+F 2 "" H 7550 5800 50  0001 C CNN
+F 3 "" H 7550 5800 50  0001 C CNN
+	1    7550 5800
+	1    0    0    -1  
+$EndComp
+Text Label 7700 4900 0    50   ~ 0
++5V
+$Comp
+L Device:R_Small_US R83
+U 1 1 601C838E
+P 7300 5100
+F 0 "R83" H 7368 5146 50  0000 L CNN
+F 1 "0" H 7368 5055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7300 5100 50  0001 C CNN
+F 3 "~" H 7300 5100 50  0001 C CNN
+F 4 "Yageo" H 7300 5100 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7300 5100 50  0001 C CNN "partnr"
+	1    7300 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R85
+U 1 1 601C9D9E
+P 7550 5100
+F 0 "R85" H 7618 5146 50  0000 L CNN
+F 1 "0" H 7618 5055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7550 5100 50  0001 C CNN
+F 3 "~" H 7550 5100 50  0001 C CNN
+F 4 "Yageo" H 7550 5100 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7550 5100 50  0001 C CNN "partnr"
+	1    7550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R81
+U 1 1 601CA24A
+P 7050 5100
+F 0 "R81" H 7118 5146 50  0000 L CNN
+F 1 "0" H 7118 5055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7050 5100 50  0001 C CNN
+F 3 "~" H 7050 5100 50  0001 C CNN
+F 4 "Yageo" H 7050 5100 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7050 5100 50  0001 C CNN "partnr"
+	1    7050 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R84
+U 1 1 601CA5E9
+P 7300 5600
+F 0 "R84" H 7368 5646 50  0000 L CNN
+F 1 "0" H 7368 5555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7300 5600 50  0001 C CNN
+F 3 "~" H 7300 5600 50  0001 C CNN
+F 4 "Yageo" H 7300 5600 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7300 5600 50  0001 C CNN "partnr"
+	1    7300 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R82
+U 1 1 601CA793
+P 7050 5600
+F 0 "R82" H 7118 5646 50  0000 L CNN
+F 1 "0" H 7118 5555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7050 5600 50  0001 C CNN
+F 3 "~" H 7050 5600 50  0001 C CNN
+F 4 "Yageo" H 7050 5600 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7050 5600 50  0001 C CNN "partnr"
+	1    7050 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R86
+U 1 1 601CC53B
+P 7550 5600
+F 0 "R86" H 7618 5646 50  0000 L CNN
+F 1 "0" H 7618 5555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7550 5600 50  0001 C CNN
+F 3 "~" H 7550 5600 50  0001 C CNN
+F 4 "Yageo" H 7550 5600 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7550 5600 50  0001 C CNN "partnr"
+	1    7550 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 5450 7050 5500
+Wire Wire Line
+	7050 5450 7050 5200
+Connection ~ 7050 5450
+Wire Wire Line
+	7050 5450 7950 5450
+Wire Wire Line
+	7950 5250 7550 5250
+Wire Wire Line
+	7550 5250 7550 5200
+Wire Wire Line
+	7950 5350 7300 5350
+Wire Wire Line
+	7300 5350 7300 5200
+Wire Wire Line
+	7300 5500 7300 5350
+Connection ~ 7300 5350
+Wire Wire Line
+	7550 5500 7550 5250
+Connection ~ 7550 5250
+Wire Wire Line
+	7050 4900 7050 5000
+Wire Wire Line
+	7300 5000 7300 4900
+Wire Wire Line
+	7050 4900 7300 4900
+Connection ~ 7300 4900
+Wire Wire Line
+	7300 4900 7550 4900
+Wire Wire Line
+	7550 5000 7550 4900
+Connection ~ 7550 4900
+Wire Wire Line
+	7550 4900 7700 4900
+Wire Wire Line
+	7550 5800 7550 5750
+Wire Wire Line
+	7550 5750 7300 5750
+Wire Wire Line
+	7300 5750 7300 5700
+Connection ~ 7550 5750
+Wire Wire Line
+	7550 5750 7550 5700
+Wire Wire Line
+	7300 5750 7050 5750
+Wire Wire Line
+	7050 5750 7050 5700
+Connection ~ 7300 5750
+$Comp
+L power:GND1 #PWR?
+U 1 1 601E40A1
+P 7000 3900
+AR Path="/601E40A1" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/601E40A1" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/601E40A1" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 7000 3650 50  0001 C CNN
+F 1 "GND1" H 7005 3727 50  0000 C CNN
+F 2 "" H 7000 3900 50  0001 C CNN
+F 3 "" H 7000 3900 50  0001 C CNN
+	1    7000 3900
+	1    0    0    -1  
+$EndComp
+Text Label 6500 2950 0    50   ~ 0
++5V
+$Comp
+L Device:R_Small_US R77
+U 1 1 601E40A8
+P 6750 3150
+F 0 "R77" H 6818 3196 50  0000 L CNN
+F 1 "0" H 6818 3105 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 6750 3150 50  0001 C CNN
+F 3 "~" H 6750 3150 50  0001 C CNN
+F 4 "Yageo" H 6750 3150 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 6750 3150 50  0001 C CNN "partnr"
+	1    6750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R79
+U 1 1 601E40AE
+P 7000 3150
+F 0 "R79" H 7068 3196 50  0000 L CNN
+F 1 "0" H 7068 3105 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7000 3150 50  0001 C CNN
+F 3 "~" H 7000 3150 50  0001 C CNN
+F 4 "Yageo" H 7000 3150 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7000 3150 50  0001 C CNN "partnr"
+	1    7000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R75
+U 1 1 601E40B4
+P 6500 3150
+F 0 "R75" H 6568 3196 50  0000 L CNN
+F 1 "0" H 6568 3105 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 6500 3150 50  0001 C CNN
+F 3 "~" H 6500 3150 50  0001 C CNN
+F 4 "Yageo" H 6500 3150 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 6500 3150 50  0001 C CNN "partnr"
+	1    6500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R78
+U 1 1 601E40BA
+P 6750 3650
+F 0 "R78" H 6818 3696 50  0000 L CNN
+F 1 "0" H 6818 3605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 6750 3650 50  0001 C CNN
+F 3 "~" H 6750 3650 50  0001 C CNN
+F 4 "Yageo" H 6750 3650 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 6750 3650 50  0001 C CNN "partnr"
+	1    6750 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R76
+U 1 1 601E40C0
+P 6500 3650
+F 0 "R76" H 6568 3696 50  0000 L CNN
+F 1 "0" H 6568 3605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 6500 3650 50  0001 C CNN
+F 3 "~" H 6500 3650 50  0001 C CNN
+F 4 "Yageo" H 6500 3650 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 6500 3650 50  0001 C CNN "partnr"
+	1    6500 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R80
+U 1 1 601E40C6
+P 7000 3650
+F 0 "R80" H 7068 3696 50  0000 L CNN
+F 1 "0" H 7068 3605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7000 3650 50  0001 C CNN
+F 3 "~" H 7000 3650 50  0001 C CNN
+F 4 "Yageo" H 7000 3650 50  0001 C CNN "Manufacturer"
+F 5 "AC0603JR-070RL" H 7000 3650 50  0001 C CNN "partnr"
+	1    7000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3500 6500 3550
+Wire Wire Line
+	6500 3500 6500 3250
+Connection ~ 6500 3500
+Wire Wire Line
+	6500 3500 7400 3500
+Wire Wire Line
+	7400 3300 7000 3300
+Wire Wire Line
+	7000 3300 7000 3250
+Wire Wire Line
+	7400 3400 6750 3400
+Wire Wire Line
+	6750 3400 6750 3250
+Wire Wire Line
+	6750 3550 6750 3400
+Connection ~ 6750 3400
+Wire Wire Line
+	7000 3550 7000 3300
+Connection ~ 7000 3300
+Wire Wire Line
+	6500 2950 6500 3050
+Wire Wire Line
+	6750 3050 6750 2950
+Wire Wire Line
+	6500 2950 6750 2950
+Connection ~ 6750 2950
+Wire Wire Line
+	6750 2950 7000 2950
+Wire Wire Line
+	7000 3050 7000 2950
+Wire Wire Line
+	7000 3900 7000 3850
+Wire Wire Line
+	7000 3850 6750 3850
+Wire Wire Line
+	6750 3850 6750 3750
+Connection ~ 7000 3850
+Wire Wire Line
+	7000 3850 7000 3750
+Wire Wire Line
+	6750 3850 6500 3850
+Wire Wire Line
+	6500 3850 6500 3750
+Connection ~ 6750 3850
+Text HLabel 10250 900  2    50   Input ~ 0
++5V
+Wire Wire Line
+	10000 900  10250 900 
+Text Label 10000 900  2    50   ~ 0
++5V
+Wire Wire Line
+	7400 2800 7100 2800
+Text Label 7100 2800 2    50   ~ 0
++5V
+Wire Wire Line
+	8800 1900 9100 1900
+Text HLabel 9100 1900 2    50   Output ~ 0
+IMODE
+Text HLabel 9100 2000 2    50   Output ~ 0
+VMODE
+Text HLabel 9100 2100 2    50   Output ~ 0
+REMOTE
+Text HLabel 9100 2200 2    50   Output ~ 0
+ON
+Text HLabel 9100 2300 2    50   Output ~ 0
+FDACLO
+Text HLabel 9100 2400 2    50   Output ~ 0
+VRANGEL
+Text HLabel 9100 2800 2    50   Output ~ 0
+10uA
+Text HLabel 9100 2900 2    50   Output ~ 0
+100uA
+Text HLabel 9100 3000 2    50   Output ~ 0
+1mA
+Text HLabel 9100 3100 2    50   Output ~ 0
+10mA
+Text HLabel 9100 3200 2    50   Output ~ 0
+100mA
+Text HLabel 9100 3300 2    50   Output ~ 0
+1A
+Text HLabel 9100 3400 2    50   Output ~ 0
+LT10mA
+Wire Wire Line
+	4550 2450 4850 2450
+Text HLabel 4850 2450 2    50   Input ~ 0
+ICLAMP
+Wire Wire Line
+	9100 3400 8800 3400
+Wire Wire Line
+	8800 3300 9100 3300
+Wire Wire Line
+	9100 3200 8800 3200
+Wire Wire Line
+	8800 3100 9100 3100
+Wire Wire Line
+	9100 3000 8800 3000
+Wire Wire Line
+	8800 2900 9100 2900
+Wire Wire Line
+	9100 2800 8800 2800
+Wire Wire Line
+	8800 2400 9100 2400
+Wire Wire Line
+	9100 2300 8800 2300
+Wire Wire Line
+	8800 2200 9100 2200
+Wire Wire Line
+	9100 2100 8800 2100
+Wire Wire Line
+	8800 2000 9100 2000
+Text HLabel 9100 2500 2    50   Output ~ 0
+CSADC
+Text HLabel 9100 2600 2    50   Output ~ 0
+CSDAC
+Wire Wire Line
+	8800 2600 9100 2600
+Wire Wire Line
+	9100 2500 8800 2500
+Wire Wire Line
+	8100 3800 8100 3900
+$Comp
+L power:GND1 #PWR?
+U 1 1 6028A721
+P 8100 3900
+AR Path="/6028A721" Ref="#PWR?"  Part="1" 
+AR Path="/60D2C4D2/6028A721" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/6028A721" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 8100 3650 50  0001 C CNN
+F 1 "GND1" H 8105 3727 50  0000 C CNN
+F 2 "" H 8100 3900 50  0001 C CNN
+F 3 "" H 8100 3900 50  0001 C CNN
+	1    8100 3900
+	1    0    0    -1  
+$EndComp
+Text Label 8100 1300 0    50   ~ 0
++5V
+Wire Wire Line
+	8100 1300 8100 1600
+Wire Wire Line
+	1600 1450 1900 1450
+Wire Wire Line
+	1900 1900 1900 1800
+Connection ~ 1900 1900
+Wire Wire Line
+	2200 1900 2200 1800
+Wire Wire Line
+	1900 1900 2200 1900
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6035EF27
+P 1900 2000
+AR Path="/6035EF27" Ref="#PWR?"  Part="1" 
+AR Path="/6046F04F/6035EF27" Ref="#PWR?"  Part="1" 
+AR Path="/60FF65CD/6035EF27" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 1900 1750 50  0001 C CNN
+F 1 "GNDREF" H 1905 1827 50  0000 C CNN
+F 2 "" H 1900 2000 50  0001 C CNN
+F 3 "" H 1900 2000 50  0001 C CNN
+	1    1900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6035EF21
+P 2200 1700
+AR Path="/6046F04F/6035EF21" Ref="C?"  Part="1" 
+AR Path="/60FF65CD/6035EF21" Ref="C57"  Part="1" 
+F 0 "C57" H 2292 1746 50  0000 L CNN
+F 1 "4.7u 25V" H 2292 1655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2200 1700 50  0001 C CNN
+F 3 "~" H 2200 1700 50  0001 C CNN
+F 4 "Taiyo Yuden" H 2200 1700 50  0001 C CNN "Manufacturer"
+F 5 "TMK107BBJ475KA-T" H 2200 1700 50  0001 C CNN "partnr"
+	1    2200 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6035EF1B
+P 1900 1700
+AR Path="/6046F04F/6035EF1B" Ref="C?"  Part="1" 
+AR Path="/60FF65CD/6035EF1B" Ref="C56"  Part="1" 
+F 0 "C56" H 1992 1746 50  0000 L CNN
+F 1 ".1u" H 1992 1655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1900 1700 50  0001 C CNN
+F 3 "~" H 1900 1700 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 1900 1700 50  0001 C CNN "Manufacturer"
+F 5 "CL10B104KB8NNNL" H 1900 1700 50  0001 C CNN "partnr"
+	1    1900 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1600 2200 1450
+Wire Wire Line
+	1900 1600 1900 1450
+Connection ~ 1900 1450
+Wire Wire Line
+	1900 1450 2200 1450
+Wire Wire Line
+	5200 2750 4700 2750
+Text HLabel 5200 2750 2    50   Input ~ 0
+GND
+Connection ~ 4700 2750
+Wire Wire Line
+	4700 2750 4700 2850
+Wire Wire Line
+	1900 1900 1900 1950
+Wire Wire Line
+	1400 1950 1900 1950
+Text HLabel 1400 1950 0    50   Input ~ 0
+GND_CPU
+Connection ~ 1900 1950
+Wire Wire Line
+	1900 1950 1900 2000
+NoConn ~ 7400 2500
+NoConn ~ 7400 2600
+NoConn ~ 8800 3500
+Wire Wire Line
+	3750 1950 3600 1950
+Wire Wire Line
+	3600 1950 3600 1850
+Connection ~ 3600 1850
+Wire Wire Line
+	3600 1850 3750 1850
+Wire Wire Line
+	4550 1950 4650 1950
+Wire Wire Line
+	4650 1950 4650 1850
+Connection ~ 4650 1850
+Wire Wire Line
+	4650 1850 4750 1850
+Text Label 5600 4400 0    50   ~ 0
+ISDA
+Wire Wire Line
+	4550 4400 5450 4400
+Wire Wire Line
+	5150 4500 5600 4500
+Wire Wire Line
+	5450 4100 5450 4400
+Connection ~ 5450 4400
+Wire Wire Line
+	5450 4400 5600 4400
+$EndSCHEMATC

@@ -1,0 +1,86 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AD5686RBRUZ
+D Quad, 16-Bit nanoDAC+ with SPI Interface, TSSOP-16
+K dac 4nch 16bit spi
+F https://www.analog.com/media/en/technical-documentation/data-sheets/AD5689_5687.pdf
+$ENDCMP
+#
+$CMP AD7190BRUZ
+D 4.8 kHz Ultralow Noise 24-Bit Sigma-Delta ADC with PGA
+K adc 4ch 24bit serial
+F https://www.analog.com/media/en/technical-documentation/data-sheets/AD7190.pdf
+$ENDCMP
+#
+$CMP ADR431ARZ
+D Ultralow Noise XFET Voltage References with Current Sink and Source Capability
+K Voltage reference
+F https://www.analog.com/media/en/technical-documentation/data-sheets/adr430_431_433_434_435.pdf
+$ENDCMP
+#
+$CMP AQY22
+D RF PhotoMOS
+F https://datasheet.octopart.com/AQY222R1S-Panasonic-datasheet-522434.pdf
+$ENDCMP
+#
+$CMP BAV170
+D DUAL SURFACE MOUNT LOW LEAKAGE DIODE, common cathode, SOT-23
+K diode
+F https://no.mouser.com/datasheet/2/115/ds30234-820460.pdf
+$ENDCMP
+#
+$CMP BAV199
+D DUAL SURFACE MOUNT LOW LEAKAGE DIODE, SOT-23
+K diode
+F https://www.diodes.com/assets/Datasheets/ds30232.pdf
+$ENDCMP
+#
+$CMP DG444
+D Quad SPST Analog Switches, normally OFF, 50Ohm Ron, SOIC-16
+K CMOS Analog Switch
+F https://www.vishay.com/docs/70054/dg444.pdf
+$ENDCMP
+#
+$CMP DPBW03F
+D Isolated DC/DC Converters 9-36Vin
+K DC-DC
+F https://www.meanwellusa.com/productPdf.aspx?i=794
+$ENDCMP
+#
+$CMP DR331-105BE
+D 100uH CM Choke
+K choke
+F https://www.bourns.com/pdfs/DR331.pdf
+$ENDCMP
+#
+$CMP OPA140
+D OPAx140High-precision,low-noise,rail-to-railoutput,11-MHzJFET op amp
+K single opamp
+F https://www.ti.com/lit/ds/symlink/opa140.pdf?ts=1611999171015&ref_url=https%253A%252F%252Fwww.google.com%252F
+$ENDCMP
+#
+$CMP OPA2140
+D OPA2140High-precision,low-noise,rail-to-railoutput,11-MHzJFET op amp
+K dual opamp low-power low-noise
+F https://www.ti.com/lit/ds/symlink/opa2140.pdf?ts=1610525555939&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FOPA2140%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dasc-null-null-GPN_EN-cpc-pf-google-eu%2526utm_content%253DOPA2140%2526ds_k%253DOPA2140%2526DCM%253Dyes%2526gclid%253DCj0KCQiA0fr_BRDaARIsAABw4EsczQIGglrlP4RtTtvdv_Op0rl7xJRVwg4wbD1Vjl4OiDdD2lPapdwaApQFEALw_wcB%2526gclsrc%253Daw.ds
+$ENDCMP
+#
+$CMP TL072
+D Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8
+K dual opamp
+F http://www.ti.com/lit/ds/symlink/tl071.pdf
+$ENDCMP
+#
+$CMP TLC227x
+D Dual, Low-Noise, 2.18MHz Rail-To-Rail Operational Amplifier
+K dual opamp low-noise
+F https://www.ti.com/lit/ds/symlink/tlc2272a.pdf?ts=1610539637440&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DTLC2272ACDR
+$ENDCMP
+#
+$CMP TLP170D
+D MOSFET Photorelay 1-Form-A, Voff 200V, Ion 200mA,
+K MOSFET Output Photorelay 1-Form-A
+F file:///C:/Users/sverre/AppData/Local/Temp/TLP170D_datasheet_en_20190617.pdf
+$ENDCMP
+#
+#End Doc Library

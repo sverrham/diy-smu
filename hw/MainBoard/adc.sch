@@ -1,0 +1,394 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 9
+Title "DIY SMU"
+Date ""
+Rev "A"
+Comp "Hamre Engineering"
+Comment1 "Based on: http://www.djerickson.com/diy_smu/index.html"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Small_US R65
+U 1 1 6038254E
+P 3000 2150
+F 0 "R65" V 2795 2150 50  0000 C CNN
+F 1 "10K .1%" V 2886 2150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3000 2150 50  0001 C CNN
+F 3 "~" H 3000 2150 50  0001 C CNN
+F 4 "Yageo" H 3000 2150 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD1010KL" H 3000 2150 50  0001 C CNN "partnr"
+	1    3000 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R66
+U 1 1 60382D78
+P 3000 2550
+F 0 "R66" V 2795 2550 50  0000 C CNN
+F 1 "21.5K .1%" V 2886 2550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3000 2550 50  0001 C CNN
+F 3 "~" H 3000 2550 50  0001 C CNN
+F 4 "Yageo" H 3000 2550 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD0721K5L" H 3000 2550 50  0001 C CNN "partnr"
+	1    3000 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C54
+U 1 1 60383329
+P 3600 1750
+F 0 "C54" V 3828 1750 50  0000 C CNN
+F 1 "1000p" V 3737 1750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 3600 1750 50  0001 C CNN
+F 3 "~" H 3600 1750 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 3600 1750 50  0001 C CNN "Manufacturer"
+F 5 "CL10B102KB8NNNC" H 3600 1750 50  0001 C CNN "partnr"
+	1    3600 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R69
+U 1 1 60384296
+P 3600 2150
+F 0 "R69" V 3395 2150 50  0000 C CNN
+F 1 "10K .1%" V 3486 2150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 2150 50  0001 C CNN
+F 3 "~" H 3600 2150 50  0001 C CNN
+F 4 "Yageo" H 3600 2150 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD1010KL" H 3600 2150 50  0001 C CNN "partnr"
+	1    3600 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2550 3300 2550
+Wire Wire Line
+	3300 2550 3300 2150
+Wire Wire Line
+	3300 1750 3500 1750
+Wire Wire Line
+	3100 2150 3300 2150
+Connection ~ 3300 2150
+Wire Wire Line
+	3300 2150 3300 1750
+Wire Wire Line
+	3500 2150 3300 2150
+Wire Wire Line
+	2900 2150 2450 2150
+Wire Wire Line
+	2900 2550 2450 2550
+Text Label 2450 2150 0    50   ~ 0
+-2.5VREF
+Text Label 2450 2550 0    50   ~ 0
+VM
+Text HLabel 2450 2150 0    50   Input ~ 0
+-2.5VREF
+Text HLabel 2450 2550 0    50   Input ~ 0
+VM
+$Comp
+L Device:R_Small_US R67
+U 1 1 60387F7D
+P 3000 3850
+F 0 "R67" V 2795 3850 50  0000 C CNN
+F 1 "10K .1%" V 2886 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3000 3850 50  0001 C CNN
+F 3 "~" H 3000 3850 50  0001 C CNN
+F 4 "Yageo" H 3000 3850 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD1010KL" H 3000 3850 50  0001 C CNN "partnr"
+	1    3000 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small_US R68
+U 1 1 60387F83
+P 3000 4250
+F 0 "R68" V 2795 4250 50  0000 C CNN
+F 1 "21.5K .1%" V 2886 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3000 4250 50  0001 C CNN
+F 3 "~" H 3000 4250 50  0001 C CNN
+F 4 "Yageo" H 3000 4250 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD0721K5L" H 3000 4250 50  0001 C CNN "partnr"
+	1    3000 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C55
+U 1 1 60387F89
+P 3600 3450
+F 0 "C55" V 3828 3450 50  0000 C CNN
+F 1 "1000p" V 3737 3450 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 3600 3450 50  0001 C CNN
+F 3 "~" H 3600 3450 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 3600 3450 50  0001 C CNN "Manufacturer"
+F 5 "CL10B102KB8NNNC" H 3600 3450 50  0001 C CNN "partnr"
+	1    3600 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R70
+U 1 1 60387F8F
+P 3600 3850
+F 0 "R70" V 3395 3850 50  0000 C CNN
+F 1 "10K .1%" V 3486 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 3850 50  0001 C CNN
+F 3 "~" H 3600 3850 50  0001 C CNN
+F 4 "Yageo" H 3600 3850 50  0001 C CNN "Manufacturer"
+F 5 "RT0603BRD1010KL" H 3600 3850 50  0001 C CNN "partnr"
+	1    3600 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 4250 3300 4250
+Wire Wire Line
+	3300 4250 3300 3850
+Wire Wire Line
+	3300 3450 3500 3450
+Wire Wire Line
+	3100 3850 3300 3850
+Connection ~ 3300 3850
+Wire Wire Line
+	3300 3850 3300 3450
+Wire Wire Line
+	3500 3850 3300 3850
+Wire Wire Line
+	2900 3850 2450 3850
+Wire Wire Line
+	2900 4250 2450 4250
+Text Label 2450 3850 0    50   ~ 0
+-2.5VREF
+Text HLabel 2450 4250 0    50   Input ~ 0
+IM
+$Comp
+L parts:TLC227x U23
+U 1 1 60390781
+P 3700 2650
+F 0 "U23" H 3700 2283 50  0000 C CNN
+F 1 "TLC227x" H 3700 2374 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3800 2650 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tlc2272a.pdf?ts=1610539637440&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DTLC2272ACDR" H 3950 2800 50  0001 C CNN
+F 4 "Texas Instruments" H 3700 2650 50  0001 C CNN "Manufacturer"
+F 5 "TLC2272AIDR" H 3700 2650 50  0001 C CNN "partnr"
+	1    3700 2650
+	1    0    0    1   
+$EndComp
+$Comp
+L parts:TLC227x U23
+U 2 1 603911F1
+P 3750 4350
+F 0 "U23" H 3750 3983 50  0000 C CNN
+F 1 "TLC227x" H 3750 4074 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3850 4350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tlc2272a.pdf?ts=1610539637440&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DTLC2272ACDR" H 4000 4500 50  0001 C CNN
+F 4 "Texas Instruments" H 3750 4350 50  0001 C CNN "Manufacturer"
+F 5 "TLC2272AIDR" H 3750 4350 50  0001 C CNN "partnr"
+	2    3750 4350
+	1    0    0    1   
+$EndComp
+$Comp
+L parts:TLC227x U23
+U 3 1 60391B21
+P 3750 5650
+F 0 "U23" H 3808 5696 50  0000 L CNN
+F 1 "TLC227x" H 3808 5605 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3850 5650 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tlc2272a.pdf?ts=1610539637440&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DTLC2272ACDR" H 4000 5800 50  0001 C CNN
+F 4 "Texas Instruments" H 3750 5650 50  0001 C CNN "Manufacturer"
+F 5 "TLC2272AIDR" H 3750 5650 50  0001 C CNN "partnr"
+	3    3750 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2550 3300 2550
+Connection ~ 3300 2550
+$Comp
+L power:GND1 #PWR023
+U 1 1 60393355
+P 3300 2900
+F 0 "#PWR023" H 3300 2650 50  0001 C CNN
+F 1 "GND1" H 3305 2727 50  0000 C CNN
+F 2 "" H 3300 2900 50  0001 C CNN
+F 3 "" H 3300 2900 50  0001 C CNN
+	1    3300 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2750 3300 2750
+Wire Wire Line
+	3300 2750 3300 2900
+Wire Wire Line
+	3450 4250 3300 4250
+Connection ~ 3300 4250
+$Comp
+L power:GND1 #PWR024
+U 1 1 60394A7F
+P 3300 4600
+F 0 "#PWR024" H 3300 4350 50  0001 C CNN
+F 1 "GND1" H 3305 4427 50  0000 C CNN
+F 2 "" H 3300 4600 50  0001 C CNN
+F 3 "" H 3300 4600 50  0001 C CNN
+	1    3300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4450 3300 4450
+Wire Wire Line
+	3300 4450 3300 4600
+Wire Wire Line
+	3700 1750 4150 1750
+Wire Wire Line
+	4150 1750 4150 2150
+Wire Wire Line
+	4150 2650 4000 2650
+Wire Wire Line
+	3700 2150 4150 2150
+Connection ~ 4150 2150
+Wire Wire Line
+	4150 2150 4150 2650
+Wire Wire Line
+	3700 3450 4250 3450
+Wire Wire Line
+	4250 3450 4250 3850
+Wire Wire Line
+	4250 4350 4050 4350
+Wire Wire Line
+	3700 3850 4250 3850
+Connection ~ 4250 3850
+Wire Wire Line
+	4250 3850 4250 4350
+Connection ~ 4150 2650
+Connection ~ 4250 4350
+Text Label 4600 2650 0    50   ~ 0
+VMADC
+Text Label 4700 4350 0    50   ~ 0
+IMADC
+$Comp
+L parts:AD7190BRUZ U24
+U 1 1 6039D7CE
+P 7300 3400
+F 0 "U24" H 7300 4581 50  0000 C CNN
+F 1 "AD7190BRUZ" H 7300 4490 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-24_4.4x7.8mm_Pitch0.65mm" H 7300 3400 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD7190.pdf" H 7400 3100 50  0001 C CNN
+F 4 "AD7190BRUZ" H 7300 3400 50  0001 C CNN "Manufacturer"
+F 5 "AD7190BRUZ" H 7300 3400 50  0001 C CNN "partnr"
+	1    7300 3400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8000 3150
+NoConn ~ 8000 3250
+NoConn ~ 8000 4000
+NoConn ~ 6600 3350
+NoConn ~ 6600 3250
+NoConn ~ 6600 2850
+NoConn ~ 6600 2950
+Wire Wire Line
+	4150 2650 6600 2650
+Wire Wire Line
+	6600 2750 5350 2750
+Wire Wire Line
+	5350 2750 5350 4350
+Wire Wire Line
+	4250 4350 5350 4350
+Wire Wire Line
+	6600 3100 6050 3100
+Wire Wire Line
+	7400 2400 7400 2050
+Wire Wire Line
+	7300 2400 7300 2050
+Wire Wire Line
+	7300 2050 7400 2050
+Connection ~ 7400 2050
+Wire Wire Line
+	7400 2050 7400 1900
+Text Label 7400 2050 0    50   ~ 0
++5V
+Text Label 6050 3100 0    50   ~ 0
++2.5VREF
+$Comp
+L power:GND1 #PWR026
+U 1 1 603A4142
+P 7400 4700
+F 0 "#PWR026" H 7400 4450 50  0001 C CNN
+F 1 "GND1" H 7405 4527 50  0000 C CNN
+F 2 "" H 7400 4700 50  0001 C CNN
+F 3 "" H 7400 4700 50  0001 C CNN
+	1    7400 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4550 7300 4550
+Wire Wire Line
+	7300 4550 7300 4400
+Wire Wire Line
+	7400 4400 7400 4550
+Connection ~ 7400 4550
+Wire Wire Line
+	7400 4550 7400 4700
+Wire Wire Line
+	7300 4550 7050 4550
+Wire Wire Line
+	7050 4550 7050 4400
+Connection ~ 7300 4550
+NoConn ~ 8000 2950
+NoConn ~ 8000 3050
+$Comp
+L power:GND1 #PWR027
+U 1 1 603A90CD
+P 9050 2600
+F 0 "#PWR027" H 9050 2350 50  0001 C CNN
+F 1 "GND1" H 9055 2427 50  0000 C CNN
+F 2 "" H 9050 2600 50  0001 C CNN
+F 3 "" H 9050 2600 50  0001 C CNN
+	1    9050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2600 9050 2600
+Wire Wire Line
+	8000 2700 8500 2700
+Text Label 8500 2700 0    50   ~ 0
++2.5VREF
+Text HLabel 6050 3100 0    50   Input ~ 0
++2.5VREF
+NoConn ~ 6600 3600
+Text HLabel 5900 3750 0    50   Input ~ 0
+~CS
+Text HLabel 5900 3850 0    50   Input ~ 0
+SCK
+Text HLabel 5900 3950 0    50   Input ~ 0
+MOSI
+Text HLabel 5900 4050 0    50   Output ~ 0
+MISO
+Wire Wire Line
+	6600 4050 5900 4050
+Wire Wire Line
+	5900 3950 6600 3950
+Wire Wire Line
+	6600 3850 5900 3850
+Wire Wire Line
+	5900 3750 6600 3750
+$Comp
+L power:GND1 #PWR025
+U 1 1 603B0441
+P 3750 6100
+F 0 "#PWR025" H 3750 5850 50  0001 C CNN
+F 1 "GND1" H 3755 5927 50  0000 C CNN
+F 2 "" H 3750 6100 50  0001 C CNN
+F 3 "" H 3750 6100 50  0001 C CNN
+	1    3750 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 6100 3750 5950
+Wire Wire Line
+	3750 5350 3750 5200
+Text Label 3750 5200 0    50   ~ 0
++5V
+Text HLabel 7400 1900 1    50   Input ~ 0
++5V
+$EndSCHEMATC
