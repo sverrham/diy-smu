@@ -512,32 +512,6 @@ Text HLabel 3550 2800 0    50   Input ~ 0
 CL+
 Text HLabel 3550 4050 0    50   Input ~ 0
 CL-
-$Comp
-L Diode:BAV99S D1
-U 2 1 6066A76D
-P 5800 3500
-F 0 "D1" H 5800 3600 50  0000 C CNN
-F 1 "BAV99S" H 6050 3350 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 5800 3000 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 5800 3500 50  0001 C CNN
-F 4 "ON" H 5800 3500 50  0001 C CNN "Manufacturer"
-F 5 "BAV99LT1" H 5800 3500 50  0001 C CNN "partnr"
-	2    5800 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:BAV99S D1
-U 1 1 6066B9E4
-P 5800 2250
-F 0 "D1" H 5800 2350 50  0000 C CNN
-F 1 "BAV99S" H 5600 2150 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 5800 1750 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 5800 2250 50  0001 C CNN
-F 4 "ON" H 5800 2250 50  0001 C CNN "Manufacturer"
-F 5 "BAV99LT1" H 5800 2250 50  0001 C CNN "partnr"
-	1    5800 2250
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5500 3500 5350 3500
 Connection ~ 5350 3500
@@ -1026,4 +1000,34 @@ Text Label 3550 7000 0    50   ~ 0
 -15V
 Text Notes 6500 1250 0    50   ~ 0
 Missmatch original design/BOM\n
+$Comp
+L parts:BAV199 D?
+U 1 1 604CCC9C
+P 5800 2250
+AR Path="/60990492/604CCC9C" Ref="D?"  Part="1" 
+AR Path="/605D6625/604CCC9C" Ref="D1"  Part="1" 
+F 0 "D1" V 5754 2330 50  0000 L CNN
+F 1 "BAV99LT1" V 5845 2330 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5800 2250 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30232.pdf" H 5800 2250 50  0001 C CNN
+F 4 "ON" H 5800 2250 50  0001 C CNN "Manufacturer"
+F 5 "BAV99LT1" H 5800 2250 50  0001 C CNN "partnr"
+	1    5800 2250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L parts:BAV199 D?
+U 1 1 604D30B5
+P 5800 3500
+AR Path="/60990492/604D30B5" Ref="D?"  Part="1" 
+AR Path="/605D6625/604D30B5" Ref="D7"  Part="1" 
+F 0 "D7" V 5754 3580 50  0000 L CNN
+F 1 "BAV199LT1" V 5845 3580 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5800 3500 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30232.pdf" H 5800 3500 50  0001 C CNN
+F 4 "ON" H 5800 3500 50  0001 C CNN "Manufacturer"
+F 5 "BAV99LT1" H 5800 3500 50  0001 C CNN "partnr"
+	1    5800 3500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

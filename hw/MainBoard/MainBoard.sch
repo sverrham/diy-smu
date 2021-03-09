@@ -755,4 +755,48 @@ CLAMP
 Wire Wire Line
 	1750 2200 2050 2200
 NoConn ~ 1750 1700
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60487A1E
+P 2550 8950
+F 0 "H1" H 2650 8996 50  0000 L CNN
+F 1 "MountingHole" H 2650 8905 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2550 8950 50  0001 C CNN
+F 3 "~" H 2550 8950 50  0001 C CNN
+	1    2550 8950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60488428
+P 2550 9150
+F 0 "H2" H 2650 9196 50  0000 L CNN
+F 1 "MountingHole" H 2650 9105 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2550 9150 50  0001 C CNN
+F 3 "~" H 2550 9150 50  0001 C CNN
+	1    2550 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6048873F
+P 2550 9350
+F 0 "H3" H 2650 9396 50  0000 L CNN
+F 1 "MountingHole" H 2650 9305 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2550 9350 50  0001 C CNN
+F 3 "~" H 2550 9350 50  0001 C CNN
+	1    2550 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 604889EC
+P 2550 9550
+F 0 "H4" H 2650 9596 50  0000 L CNN
+F 1 "MountingHole" H 2650 9505 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2550 9550 50  0001 C CNN
+F 3 "~" H 2550 9550 50  0001 C CNN
+	1    2550 9550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
